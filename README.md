@@ -79,7 +79,7 @@ export class AppModule {
 }
 ```
 
-2) You can pass an `TrumbowygOptions` via `<trumbowyg-ngx-editor [options]="options"></trumbowyg-ngx-editor>`.
+2) You can pass a `TrumbowygOptions` via `<trumbowyg-ngx-editor [options]="options"></trumbowyg-ngx-editor>`.
 
 3) You can also combine the two options above. 
 
@@ -87,5 +87,6 @@ Lets assume you want to configure the `TrumbowygNgxModule` at module level, but 
 
 You can do that too. All you need to do is to pass an `TrumbowygOptions` via `<trumbowyg-ngx-editor [options]="options"></trumbowyg-ngx-editor>` that will override the global configuration for that particular editor instance.
 
+If you don't want to provide any configuration just import `TrumbowygNgxModule` and the default Trumbowyg's settings will be applied.
 
 
