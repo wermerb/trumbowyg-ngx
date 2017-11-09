@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+    <trumbowyg-ngx-editor id="editor" formControlName="foo"></trumbowyg-ngx-editor>
+</form>
+
+<form [formGroup]="form">
+    <trumbowyg-ngx-editor id="withPlaceholder" placeholder="bar" formControlName="foo"></trumbowyg-ngx-editor>
+</form>
+
+<form #f="ngForm">
+    <trumbowyg-ngx-editor id="disabled" name="model" [(ngModel)]="model" disabled></trumbowyg-ngx-editor>
+</form>
+
+<form #f1="ngForm">
+    <trumbowyg-ngx-editor id="withContent" name="modelWithContent"
+                          [(ngModel)]="modelWithContent"></trumbowyg-ngx-editor>
+</form>
+
+<form #f2="ngForm">
+    <trumbowyg-ngx-editor id="configOverride" name="configOverride" [options]="options"
+                          [(ngModel)]="modelWithContent"></trumbowyg-ngx-editor>
+</form>
+
