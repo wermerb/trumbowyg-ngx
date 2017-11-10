@@ -10,7 +10,6 @@ import {
     OnDestroy,
     OnInit,
     Optional,
-    Self,
     ViewChild,
     ViewEncapsulation
 } from '@angular/core';
@@ -65,7 +64,6 @@ export class EditorComponent implements ControlValueAccessor, OnInit, AfterViewI
                 @Inject(TRUMBOWYG_OPTIONS)
                 @Optional()
                 private _config: TrumbowygOptions,
-                @Self()
                 public editorControl: NgControl) {
         editorControl.valueAccessor = this;
     }
