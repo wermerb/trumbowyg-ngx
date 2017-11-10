@@ -25,7 +25,7 @@ This an Angular wrapper for [Trumbowyg WYSIWYG editor](https://alex-d.github.io/
 
 ## Usage
 
-You can import `TrumbowygNgxModule` as many module as you like.
+You can import `TrumbowygNgxModule` as many of your modules as you like.
 
 The component supports both `FormsModule` and `ReactiveFormsModule`.
 
@@ -85,7 +85,7 @@ export class AppModule {
 
 Lets assume you want to configure the `TrumbowygNgxModule` at module level, but at some point you want to create an editor with a different behaviour.
 
-You can do that too. All you need to do is to pass an `TrumbowygOptions` via `<trumbowyg-ngx-editor [options]="options"></trumbowyg-ngx-editor>` that will override the global configuration for that particular editor instance.
+In order to do that all you need to do is to pass an `TrumbowygOptions` via `<trumbowyg-ngx-editor [options]="options"></trumbowyg-ngx-editor>` that will override the global configuration for that particular editor instance.
 
 If you don't want to provide any configuration just import `TrumbowygNgxModule` and the default Trumbowyg's settings will be applied.
 
