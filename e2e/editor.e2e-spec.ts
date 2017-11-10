@@ -20,7 +20,7 @@ describe('Editor', () => {
     it('should display inserted text', () => {
         page.getRenderedEditor('editor').sendKeys('abc');
 
-        expect(page.getRenderedEditor('editor').getText()).toBe('abc');
+        expect(page.getValueContainer().getText()).toBe('{ "foo": "abc" }');
     });
 
     it('should display placeholder', () => {

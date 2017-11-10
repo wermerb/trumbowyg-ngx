@@ -14,4 +14,7 @@ export class EditorPage {
         return element(by.id(id)).element(by.css('.trumbowyg-editor'));
     }
 
+    getValueContainer() {
+        return element(by.tagName('h1'));
+    }
 }

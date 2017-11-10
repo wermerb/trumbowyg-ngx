@@ -1,7 +1,6 @@
 import {
     AfterViewInit,
     ChangeDetectionStrategy,
-    ChangeDetectorRef,
     Component,
     ElementRef,
     Inject,
@@ -60,8 +59,7 @@ export class EditorComponent implements ControlValueAccessor, OnInit, AfterViewI
     private propagateTouched = () => {
     }
 
-    constructor(private _changeDetection: ChangeDetectorRef,
-                @Inject(TRUMBOWYG_OPTIONS)
+    constructor(@Inject(TRUMBOWYG_OPTIONS)
                 @Optional()
                 private _config: TrumbowygOptions,
                 public editorControl: NgControl) {
@@ -82,10 +80,8 @@ export class EditorComponent implements ControlValueAccessor, OnInit, AfterViewI
             this.setContent(this._initValue);
         }).on('tbwchange', () => {
             this.propagateChange(this.getContent());
-            this._changeDetection.detectChanges();
         }).on('tbwblur', () => {
             this.propagateTouched();
-            this._changeDetection.detectChanges();
         });
     }
 
