@@ -1,6 +1,6 @@
 # TrumbowygNgx
 
-This an Angular wrapper for [Trumbowyg WYSIWYG editor](https://alex-d.github.io/Trumbowyg/).
+This an Angular wrapper for the [Trumbowyg WYSIWYG editor](https://alex-d.github.io/Trumbowyg/).
 
 ## Getting started
 
@@ -41,12 +41,12 @@ The component supports both `FormsModule` and `ReactiveFormsModule`.
 </form>
 ```
 
-Its also supports common input attributes like: 
+It also supports common input attributes like: 
   * disabled
   * required
   * placeholder
 
-There are three ways to provide configuration:
+There are two ways to provide configuration:
 
 1) At module level
 ```typescript
@@ -81,7 +81,7 @@ export class AppModule {
 
 2) You can pass a `TrumbowygOptions` via `<trumbowyg-ngx-editor [options]="options"></trumbowyg-ngx-editor>`.
 
-3) You can also combine the two options above. 
+Or you can use the combination of the two shown above. 
 
 Lets assume you want to configure the `TrumbowygNgxModule` at module level, but at some point you want to create an editor with a different behaviour.
 
