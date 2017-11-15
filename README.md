@@ -1,4 +1,4 @@
-# TrumbowygNgx
+# TrumbowygNgx [![npm version](https://badge.fury.io/js/trumbowyg-ngx.svg)](https://badge.fury.io/js/trumbowyg-ngx)
 
 This an Angular wrapper for the [Trumbowyg WYSIWYG editor](https://alex-d.github.io/Trumbowyg/).
 
