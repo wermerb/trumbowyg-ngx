@@ -1,16 +1,18 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import {
-    EditorComponent,
-    TRUMBOWYG_OPTIONS,
-    TrumbowygOptions
-} from './editor/editor.component';
+import {EditorDirective} from './directive/editor.directive';
+import {EditorComponent} from './component/editor/editor.component';
+import {TrumbowygOptions} from './model/trumbowyg-options';
+import {TRUMBOWYG_OPTIONS} from './config/config';
+
 
 @NgModule({
     declarations: [
-        EditorComponent
+        EditorComponent,
+        EditorDirective
     ],
     exports: [
-        EditorComponent
+        EditorComponent,
+        EditorDirective
     ]
 })
 export class TrumbowygNgxModule {
