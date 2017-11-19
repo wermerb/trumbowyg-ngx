@@ -1,4 +1,4 @@
-# TrumbowygNgx
+# TrumbowygNgx [![npm version](https://badge.fury.io/js/trumbowyg-ngx.svg)](https://badge.fury.io/js/trumbowyg-ngx) [![bitHound Code](https://www.bithound.io/github/wermerb/trumbowyg-ngx/badges/code.svg)](https://www.bithound.io/github/wermerb/trumbowyg-ngx)
 
 This an Angular 5 component and a directive wrapper for [Trumbowyg WYSIWYG editor](https://alex-d.github.io/Trumbowyg/).
 
@@ -43,12 +43,12 @@ The component and the directive both supports `FormsModule` and `ReactiveFormsMo
 </form>
 ```
 
-Its also supports common input attributes like: 
+It also supports common input attributes like: 
   * disabled
   * required
   * placeholder
 
-There are three ways to provide configuration:
+There are two ways to provide configuration:
 
 1) At module level
 ```typescript
@@ -83,7 +83,7 @@ export class AppModule {
 
 2) You can pass a `TrumbowygOptions` via `[options]="options"` for both the component or the directive.
 
-3) You can also combine the two options above. 
+Or you can use the combination of the two shown above. 
 
 Lets assume you want to configure the `TrumbowygNgxModule` at module level, but at some point you want to create an editor with a different behaviour.
 
