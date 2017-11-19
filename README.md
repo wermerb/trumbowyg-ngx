@@ -1,6 +1,6 @@
 # TrumbowygNgx [![npm version](https://badge.fury.io/js/trumbowyg-ngx.svg)](https://badge.fury.io/js/trumbowyg-ngx) [![bitHound Code](https://www.bithound.io/github/wermerb/trumbowyg-ngx/badges/code.svg)](https://www.bithound.io/github/wermerb/trumbowyg-ngx)
 
-This an Angular wrapper for the [Trumbowyg WYSIWYG editor](https://alex-d.github.io/Trumbowyg/).
+This an Angular 5 component and a directive wrapper for [Trumbowyg WYSIWYG editor](https://alex-d.github.io/Trumbowyg/).
 
 ## Getting started
 
@@ -27,17 +27,19 @@ This an Angular wrapper for the [Trumbowyg WYSIWYG editor](https://alex-d.github
 
 You can import `TrumbowygNgxModule` as many of your modules as you like.
 
-The component supports both `FormsModule` and `ReactiveFormsModule`.
+The component and the directive both supports `FormsModule` and `ReactiveFormsModule`.
 
 ```html
 <form #f="ngForm">
     <trumbowyg-ngx-editor name="editor" [(ngModel)]="model"></trumbowyg-ngx-editor>
+    <textarea trumbowygNgxEditor name="editorDirective" [(ngModel)]="model"></textarea>
 </form>
 ```
 
 ```html
 <form [formGroup]="form">
     <trumbowyg-ngx-editor formControlName="model"></trumbowyg-ngx-editor>
+    <textarea trumbowygNgxEditor formControlName="model"></textarea>
 </form>
 ```
 
@@ -79,7 +81,7 @@ export class AppModule {
 }
 ```
 
-2) You can pass a `TrumbowygOptions` via `<trumbowyg-ngx-editor [options]="options"></trumbowyg-ngx-editor>`.
+2) You can pass a `TrumbowygOptions` via `[options]="options"` for both the component or the directive.
 
 Or you can use the combination of the two shown above. 
 

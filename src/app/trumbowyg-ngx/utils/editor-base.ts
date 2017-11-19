@@ -1,57 +1,20 @@
-import {
-    AfterViewInit,
-    ChangeDetectionStrategy,
-    Component,
-    ElementRef,
-    Inject,
-    InjectionToken,
-    Input,
-    OnDestroy,
-    OnInit,
-    Optional,
-    ViewChild,
-    ViewEncapsulation
-} from '@angular/core';
+import {AfterViewInit, ElementRef, OnDestroy, OnInit} from '@angular/core';
 import {ControlValueAccessor, NgControl} from '@angular/forms';
+import {TrumbowygOptions} from '../model/trumbowyg-options';
 
 declare var $: any;
 
-export interface TrumbowygOptions {
-    prefix?: string;
-    lang?: string;
-    svgPath?: string | boolean;
-    hideButtonTexts?: boolean;
-    btns?: Array<string[]>;
-    semantic?: boolean;
-    resetCss?: boolean;
-    removeformatPasted?: boolean;
-    autogrow?: boolean;
-    autogrowOnEnter?: boolean;
-}
+export abstract class EditorBase implements ControlValueAccessor, OnInit, AfterViewInit, OnDestroy {
 
-export const TRUMBOWYG_OPTIONS = new InjectionToken<TrumbowygOptions>('Trumbowyg options');
-
-@Component({
-    selector: 'trumbowyg-ngx-editor',
-    templateUrl: './editor.component.html',
-    styleUrls: ['./editor.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    encapsulation: ViewEncapsulation.None
-})
-export class EditorComponent implements ControlValueAccessor, OnInit, AfterViewInit, OnDestroy {
-
-    @Input()
     options: TrumbowygOptions | null;
 
-    @Input()
     placeholder: string | null;
 
-    @ViewChild('editor')
-    private _editor: ElementRef;
+    protected _editor: ElementRef;
+
+    protected _initValue: string;
 
     private _disabled: boolean;
-
-    private _initValue: string;
 
     private propagateChange = (_: any) => {
     }
@@ -59,10 +22,8 @@ export class EditorComponent implements ControlValueAccessor, OnInit, AfterViewI
     private propagateTouched = () => {
     }
 
-    constructor(@Inject(TRUMBOWYG_OPTIONS)
-                @Optional()
-                private _config: TrumbowygOptions,
-                public editorControl: NgControl) {
+    constructor(public editorControl: NgControl,
+                protected _config: TrumbowygOptions) {
         editorControl.valueAccessor = this;
     }
 

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {TrumbowygOptions} from './trumbowyg-ngx/editor/editor.component';
+import {TrumbowygOptions} from './trumbowyg-ngx/model/trumbowyg-options';
 
 @Component({
     selector: 'trumbowyg-ngx-root',
