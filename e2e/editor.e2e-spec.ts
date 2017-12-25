@@ -1,5 +1,5 @@
 import {EditorPage} from './editor.po';
-import {by, element} from 'protractor';
+import {browser, by, element} from 'protractor';
 
 describe('Editor', () => {
     let page: EditorPage;
@@ -33,6 +33,11 @@ describe('Editor', () => {
 
     it('should display initial value', () => {
         expect(page.getRenderedEditor('withContent').getText()).toBe('fooBar');
+    });
+
+    it('should display initial value for lazy loaded content', () => {
+        browser.driver.sleep(2000);
+        expect(page.getRenderedEditor('lazyLoadedContent').getText()).toBe('fooBar');
     });
 
     it('should override the global configuration', () => {

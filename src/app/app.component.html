@@ -44,3 +44,13 @@
               [(ngModel)]="modelWithContent"></textarea>
 </form>
 
+<form #f6="ngForm">
+    <trumbowyg-ngx-editor id="lazyLoadedContent" name="configOverride" [options]="options"
+                          [(ngModel)]="lazyContent"></trumbowyg-ngx-editor>
+</form>
+
+<form #f7="ngForm">
+    <textarea trumbowygNgxEditor id="directiveWithLazyLoadedContent" name="configOverride" [options]="options"
+              [(ngModel)]="lazyContent"></textarea>
+</form>
+
