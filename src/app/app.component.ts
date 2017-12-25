@@ -35,7 +35,6 @@ export class AppComponent implements AfterViewInit, OnDestroy {
         this._sub = of('fooBar').pipe(
             delay(1000)
         ).subscribe(string => {
-            console.log('itt')
             this.lazyContent = string;
         });
     }
