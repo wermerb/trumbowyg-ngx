@@ -4,7 +4,7 @@ This an Angular 5 component and a directive wrapper for [Trumbowyg WYSIWYG edito
 
 ## Getting started
 
-1) Run `npm install --save trumbowyg jquery trumbowyg-ngx` or `yarn add trumbowyg jquery trumbowyg-ngx`
+1) Run `npm install --save trumbowyg-ngx` or `yarn add trumbowyg-ngx`
 
 2) Add trumbowyg and jquery to your scripts.
 ```json
