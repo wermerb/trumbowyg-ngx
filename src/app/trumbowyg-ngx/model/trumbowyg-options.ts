@@ -9,4 +9,5 @@ export interface TrumbowygOptions {
     removeformatPasted?: boolean;
     autogrow?: boolean;
     autogrowOnEnter?: boolean;
+    plugins?: { [pluginName: string]: any };
 }
