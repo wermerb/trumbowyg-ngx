@@ -7021,9 +7021,9 @@ trim-right@^1.0.1:
   dependencies:
     glob "^6.0.4"
 
-trumbowyg@^2.8.1:
-  version "2.9.4"
-  resolved "https://registry.yarnpkg.com/trumbowyg/-/trumbowyg-2.9.4.tgz#1537c3a2eca0a02817a4c399670daed7fa36e411"
+trumbowyg@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/trumbowyg/-/trumbowyg-2.10.0.tgz#e74682528b07c36c78bcc341ea57bebffd565727"
 
 ts-node@~4.1.0:
   version "4.1.0"

@@ -1,6 +1,6 @@
 {
   "name": "trumbowyg-ngx",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -17,12 +17,12 @@
     }
   },
   "peerDependencies": {
-    "@angular/core": "^5.1.2",
-    "@angular/forms": "^5.1.2"
+    "@angular/core": ">=5.0.0",
+    "@angular/forms": ">=5.0.0"
   },
   "dependencies": {
     "jquery": "^3.2.1",
-    "trumbowyg": "^2.8.1"
+    "trumbowyg": "^2.10.0"
   },
   "devDependencies": {
     "@angular/cli": "~1.7.3",
