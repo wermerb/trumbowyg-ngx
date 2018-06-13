@@ -1,3 +1,5 @@
+import { CustomButton } from './custom-button';
+
 export interface TrumbowygOptions {
     prefix?: string;
     lang?: string;
@@ -10,4 +12,5 @@ export interface TrumbowygOptions {
     autogrow?: boolean;
     autogrowOnEnter?: boolean;
     plugins?: { [pluginName: string]: any };
+    btnsDef?: { [buttonName: string]: CustomButton };
 }
