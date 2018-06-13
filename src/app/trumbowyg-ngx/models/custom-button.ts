@@ -1,5 +1,5 @@
 export interface CustomButton {
-    fn: string | () => void;
+    fn: string | Function;
     tag: string;
     title: string;
     isSupported: () => boolean;

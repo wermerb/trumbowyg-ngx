@@ -1,6 +1,6 @@
 import {AfterViewInit, ElementRef, OnDestroy, OnInit} from '@angular/core';
 import {ControlValueAccessor, NgControl} from '@angular/forms';
-import {TrumbowygOptions} from '../model/trumbowyg-options';
+import {TrumbowygOptions} from '../models/trumbowyg-options';
 
 declare var $: any;
 
