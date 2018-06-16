@@ -8,4 +8,5 @@ export interface CustomButton {
     forceCSS?: boolean;
     class?: string;
     hasIcon?: boolean;
+    ico?: string;
 }
