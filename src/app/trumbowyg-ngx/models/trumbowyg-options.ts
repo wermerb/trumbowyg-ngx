@@ -1,5 +1,7 @@
-import { CustomButton } from './custom-button';
+import { ButtonConfig } from './button-config';
+import { DropdownConfig } from './dropdown-config';
 
+export type CustomButton = ButtonConfig | DropdownConfig;
 export interface TrumbowygOptions {
     prefix?: string;
     lang?: string;
